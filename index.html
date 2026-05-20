@@ -307,7 +307,213 @@ color:#888;
 
 </body>
 </html>
-
 <a href="https://youtube.com/@pankaj-roshi?si=3zvSisl7C9748xsv" target="_blank">
-  <a href="https://www.instagram.com/pankajroshi?igsh=enJxbTJibjJsc3A2" target="_blank">
-    <img src="myphoto.jpg">
+
+<button>
+YouTube Channel
+</button>
+
+</a>
+<a href="https://www.instagram.com/pankajroshi?igsh=enJxbTJibjJsc3A2" target="_blank">
+
+<button>
+Instagram
+</button>
+
+</a>
+  
+<!DOCTYPE html>
+<html>
+<head>
+<title>PANKAJ ROSHI</title>
+
+<style>
+
+body{
+background:#000;
+font-family:Arial;
+margin:0;
+padding:0;
+color:white;
+}
+
+header{
+background:linear-gradient(45deg,#ff0080,#8000ff);
+padding:25px;
+text-align:center;
+}
+
+header h1{
+font-size:45px;
+margin:0;
+}
+
+.container{
+padding:20px;
+}
+
+.upload-box{
+background:#111;
+padding:20px;
+border-radius:20px;
+margin-bottom:30px;
+box-shadow:0 0 15px #ff0080;
+}
+
+input,textarea{
+width:100%;
+padding:15px;
+margin-top:15px;
+border:none;
+border-radius:15px;
+font-size:16px;
+}
+
+button{
+width:100%;
+padding:15px;
+margin-top:15px;
+border:none;
+border-radius:50px;
+background:#ff0080;
+color:white;
+font-size:20px;
+font-weight:bold;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.card{
+background:#111;
+padding:15px;
+border-radius:20px;
+box-shadow:0 0 10px #333;
+}
+
+.card img{
+width:100%;
+border-radius:15px;
+}
+
+.prompt{
+margin-top:15px;
+color:#ddd;
+line-height:28px;
+}
+
+.copy-btn{
+background:#00c853;
+margin-top:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>PANKAJ ROSHI</h1>
+
+<p>AI Image Prompt Website</p>
+
+</header>
+
+<div class="container">
+
+<div class="upload-box">
+
+<h2>📸 Upload New AI Prompt</h2>
+
+<input type="file" id="imageInput">
+
+<textarea id="promptInput"
+placeholder="Write your AI image prompt here..."></textarea>
+
+<button onclick="addCard()">
+Add Prompt Card
+</button>
+
+</div>
+
+<div class="gallery" id="gallery">
+
+</div>
+
+</div>
+
+<script>
+
+function addCard(){
+
+const imageInput =
+document.getElementById("imageInput");
+
+const promptInput =
+document.getElementById("promptInput");
+
+const gallery =
+document.getElementById("gallery");
+
+const file =
+imageInput.files[0];
+
+if(!file || !promptInput.value){
+
+alert("Please upload image and prompt");
+
+return;
+
+}
+
+const reader =
+new FileReader();
+
+reader.onload = function(e){
+
+const card =
+document.createElement("div");
+
+card.className = "card";
+
+card.innerHTML = `
+
+<img src="${e.target.result}">
+
+<div class="prompt">
+${promptInput.value}
+</div>
+
+<button class="copy-btn"
+onclick="copyPrompt(\`${promptInput.value}\`)">
+
+Copy Prompt
+
+</button>
+
+`;
+
+gallery.appendChild(card);
+
+}
+
+reader.readAsDataURL(file);
+
+}
+
+function copyPrompt(text){
+
+navigator.clipboard.writeText(text);
+
+alert("Prompt Copied!");
+
+}
+
+</script>
+
+</body>
+</html>
