@@ -1,0 +1,262 @@
+<!DOCTYPE htmlexport default function PankajRoshiWebsite() { return ( <div className="min-h-screen bg-black text-white font-sans"> {/* Hero Section */} <section className="relative overflow-hidden bg-gradient-to-b from-blue-950 via-black to-black py-20 px-6 text-center"> <div className="max-w-5xl mx-auto"> <h1 className="text-5xl md:text-7xl font-extrabold tracking-wide text-blue-400 drop-shadow-lg"> PANKAJ ROSHI </h1> <p className="mt-6 text-lg md:text-2xl text-gray-300"> AI Image Prompts • Viral Thumbnails • Creative Designs </p> <p className="mt-4 text-gray-400 max-w-2xl mx-auto"> Discover ultra realistic AI image prompts and trending YouTube thumbnail designs. Create stunning content like a pro. </p>
+
+<div className="mt-8 flex flex-wrap justify-center gap-4">
+        <a
+          href="#prompts"
+          className="bg-blue-500 hover:bg-blue-600 transition px-6 py-3 rounded-2xl font-semibold shadow-lg"
+        >
+          Explore Prompts
+        </a>
+
+        <a
+          href="#thumbnails"
+          className="border border-blue-400 hover:bg-blue-500/20 transition px-6 py-3 rounded-2xl font-semibold"
+        >
+          View Thumbnails
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Prompt Section */}
+  <section id="prompts" className="py-16 px-6">
+    <div className="max-w-6xl mx-auto">
+      <h2 className="text-4xl font-bold text-center text-blue-400 mb-12">
+        AI Image Prompts
+      </h2>
+
+      <div className="grid md:grid-cols-3 gap-8">
+        {[
+          {
+            title: "Royal Portrait Prompt",
+            prompt:
+              "A handsome Indian teenage boy wearing royal blue silk kurta with cinematic lighting, ultra realistic DSLR portrait, luxury jewelry, blurred bokeh background"
+          },
+          {
+            title: "Instagram Reel Style",
+            prompt:
+              "Stylish Indian creator posing in neon lights, realistic skin texture, trendy hairstyle, vibrant social media aesthetic"
+          },
+          {
+            title: "Cinematic AI Art",
+            prompt:
+              "Ultra realistic cinematic portrait with dramatic lighting, sharp focus, DSLR quality, premium fashion look"
+          }
+        ].map((item, index) => (
+          <div
+            key={index}
+            className="bg-gray-900 border border-blue-500/30 rounded-3xl p-6 shadow-2xl hover:scale-105 transition duration-300"
+          >
+            <h3 className="text-2xl font-bold text-blue-300 mb-4">
+              {item.title}
+            </h3>
+
+            <p className="text-gray-300 text-sm leading-relaxed">
+              {item.prompt}
+            </p>
+
+            <button className="mt-6 w-full bg-blue-500 hover:bg-blue-600 py-3 rounded-xl font-semibold transition">
+              Copy Prompt
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Thumbnail Section */}
+  <section id="thumbnails" className="py-16 px-6 bg-gray-950">
+    <div className="max-w-6xl mx-auto">
+      <h2 className="text-4xl font-bold text-center text-blue-400 mb-12">
+        YouTube Thumbnail Gallery
+      </h2>
+
+      <div className="grid md:grid-cols-3 gap-6">
+        {[1, 2, 3, 4, 5, 6].map((item) => (
+          <div
+            key={item}
+            className="bg-gray-900 rounded-3xl overflow-hidden border border-blue-500/20 shadow-lg hover:scale-105 transition"
+          >
+            <div className="h-52 bg-gradient-to-br from-blue-500/30 to-black flex items-center justify-center text-gray-400 text-xl font-bold">
+              Thumbnail {item}
+            </div>
+
+            <div className="p-4">
+              <h3 className="text-xl font-semibold text-blue-300">
+                Viral Thumbnail Design
+              </h3>
+              <p className="text-gray-400 mt-2 text-sm">
+                Trending YouTube thumbnail concept with high CTR design.
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* About Section */}
+  <section className="py-16 px-6">
+    <div className="max-w-4xl mx-auto text-center">
+      <h2 className="text-4xl font-bold text-blue-400 mb-6">
+        About PANKAJ ROSHI
+      </h2>
+
+      <p className="text-gray-300 text-lg leading-relaxed">
+        Welcome to PANKAJ ROSHI official creative website. Here you will get
+        ultra realistic AI image prompts, trending YouTube thumbnail ideas,
+        editing inspiration, and creative content for social media creators.
+      </p>
+    </div>
+  </section>
+
+  {/* Contact Section */}
+  <section className="py-16 px-6 bg-gray-950 text-center">
+    <h2 className="text-4xl font-bold text-blue-400 mb-6">
+      Connect With Me
+    </h2>
+
+    <div className="flex flex-wrap justify-center gap-4">
+      <a
+        href="https://youtube.com"
+        className="bg-red-500 hover:bg-red-600 px-6 py-3 rounded-2xl font-semibold transition"
+      >
+        YouTube Channel
+      </a>
+
+      <a
+        href="https://instagram.com"
+        className="bg-pink-500 hover:bg-pink-600 px-6 py-3 rounded-2xl font-semibold transition"
+      >
+        Instagram
+      </a>
+    </div>
+  </section>
+
+  {/* Footer */}
+  <footer className="py-6 text-center text-gray-500 border-t border-gray-800">
+    © 2026 PANKAJ ROSHI • All Rights Reserved
+  </footer>
+</div>
+
+); }
+<html>
+<head>
+<title>PANKAJ ROSHI</title>
+
+<style>
+body{
+background:#000;
+color:white;
+font-family:Arial;
+margin:0;
+padding:0;
+}
+
+.header{
+text-align:center;
+padding:20px;
+background:#111;
+}
+
+.header img{
+width:150px;
+height:150px;
+border-radius:20px;
+object-fit:cover;
+border:3px solid orange;
+}
+
+h1{
+color:orange;
+margin-top:10px;
+}
+
+.box{
+background:#111;
+margin:20px;
+padding:15px;
+border-radius:20px;
+box-shadow:0 0 10px orange;
+}
+
+.box img{
+width:100%;
+border-radius:15px;
+}
+
+button{
+background:orange;
+color:black;
+padding:10px 20px;
+border:none;
+border-radius:10px;
+font-weight:bold;
+margin-top:10px;
+}
+
+textarea{
+width:100%;
+height:120px;
+border-radius:10px;
+padding:10px;
+margin-top:10px;
+}
+
+.ads{
+background:#222;
+padding:20px;
+text-align:center;
+margin:20px;
+border-radius:20px;
+color:orange;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+<img src="https://i.imgur.com/6VBx3io.png">
+<h1>PANKAJ ROSHI</h1>
+<p>AI Image Prompt Creator</p>
+</div>
+
+<div class="box">
+
+<img src="https://i.imgur.com/JR6xYQx.jpeg">
+
+<h2>Royal AI Photo Prompt</h2>
+
+<textarea id="prompt1">
+Ultra realistic Indian boy portrait, stylish black sunglasses, luxury outfit, glowing orange cinematic background, youtube creator style, ultra HD, realistic face, detailed skin texture, dramatic lighting, viral instagram look
+</textarea>
+
+<button onclick="copyPrompt()">
+Copy Prompt
+</button>
+
+</div>
+
+<div class="ads">
+<h2>Your Ads Here</h2>
+<p>Google Ads / Sponsor Ads</p>
+</div>
+
+<script>
+
+function copyPrompt(){
+var copyText =
+document.getElementById("prompt1");
+
+copyText.select();
+document.execCommand("copy");
+
+alert("Prompt Copied!");
+}
+
+</script>
+
+</body>
+</html>
